@@ -47,25 +47,34 @@
   }
 }
 
-.plate_wrapper > * {
-  transform: scale(0.7);
-}
-
-.plate_wrapper {
-  width: 330px;
-  height: 870px;
-  margin: 0 auto;
-  .plate {
-    width: 330px;
-    height: 870px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("");
+.disabled {
+  cursor: default !important;
+  background: #b5b5b5 !important;
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.3 !important;
   }
 }
 
-.plug_face {
-  width: 90%;
+// .plug > * {
+//   transform: scale(0.7);
+// }
+
+.plug {
+  width: 1250px;
+  height: 260px;
+  margin: 0 auto;
+  .plate {
+    width: 1250px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/eq_plate.png");
+  }
+}
+
+.plate_face {
+  width: 83%;
   height: 90%;
 }

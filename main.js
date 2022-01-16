@@ -1,9 +1,10 @@
 import './style.scss'
 
 import { context, OUTPUT } from './components/Context.js'
-import {cold_sweat2} from './components/audio/cold_sweat2.js'
+import { drum_break } from './components/audio/break.js'
+import { createSource } from './components/Source.js'
 const tuna = new Tuna(context);
-
+const startButton = document.getElementById('startButton');
 let isPlaying = false;
 
 const sourceGain = context.createGain();
@@ -29,18 +30,20 @@ outputGain.gain.value = 1;
 sourceGain.connect(dryGain);
 sourceGain.connect(wetGain);
 
-outputGain.connect(OUTPUT);
+wetGain.connect(OUTPUT);
 
 function init() {
-  const source = createSource(humanVoice);
-  source.connect(sourceGain);
-  source.start();
+  const source = createSource(drum_break);
+  source.audioSource.connect(sourceGain);
+  source.audioSource.start();
   isPlaying = true;
+  startButton.classList.add("disabled");
 
   const stopButton = document.getElementById('stopButton');
   stopButton.onclick = function() {
-    source.stop();
+    source.audioSource.stop();
     isPlaying = false;
+    startButton.classList.remove("disabled");
   };
 }
 
@@ -49,6 +52,7 @@ if (isPlaying) {
 } else {
   startButton.disabled = false;
 }
+
 
 startButton.addEventListener('click', () => {
   if (isPlaying) { return } else { init() };
