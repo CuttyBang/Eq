@@ -41,4 +41,4 @@ const rca_4cl = "UklGRlrhAABXQVZFZm10IBAAAAABAAIAAHcBAADKCAAGABgAZGF0YfTgAAAAAAA
 const preAmp = [rca_4cl,  american_6,  american_410,  american_si,  vf14m_u47,  germanium_flat,  cooker_smile];
 
 
-export { preAamp };
+export { preAmp };

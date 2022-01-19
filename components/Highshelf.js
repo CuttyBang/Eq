@@ -21,7 +21,7 @@ export default function Highshelf(freq, amt) {
     fGain.value = 0;
   }
 
-  function resonance(lev) {
+  function gain(lev) {
     let res = filter.gain;
     res.exponentialRampToValueAtTime(lev, 0.25);
     return res.value;
@@ -41,5 +41,5 @@ export default function Highshelf(freq, amt) {
   input.connect(filter);
   filter.connect(output);
 
-  return  { filter, input, output, resonance, cutoff, to };
+  return  { filter, input, output, gain, cutoff, to };
 }

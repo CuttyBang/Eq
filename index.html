@@ -15,23 +15,52 @@
         </div>
       </div>
       <div class="plug flexible center middle">
-        <div id="plate" class="plate flexible middle center">
+        <div id="plate" class="plate">
           <div class="plate_face flexible middle center column">
-            <div class="btn row flexible middle around">
-              <div class="knob flexible center middle">
-                <webaudio-knob src="./images/red_knob.png" id="mixKnob" class="control" sensitivity="0.1" enable="1"  diameter="175"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+
+            <div class="top_section flexible middle around column">
+              <div class="btn row flexible middle end rightPad">
+                <div class="knob flexible center middle">
+                  <webaudio-knob src="./images/neve.png" id="high_shelf" class="control" sensitivity="0.1" enable="1"  diameter="85"  sprites="100" value="0" min="-10" max="10" step="1"></webaudio-knob>
+                </div>
               </div>
-              <div class="knob flexible center middle">
-                <webaudio-knob src="./images/red_knob.png" id="mixKnob" class="control" sensitivity="0.1" enable="1"  diameter="175"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+              <div class="btn row flexible middle between">
+                <div class="knob flexible center middle">
+                  <webaudio-knob src="./images/neve.png" id="high_mid_freq" class="control" sensitivity="0.1" enable="1"  diameter="85"  sprites="100" value="3200" min="350" max="7200" step="1"></webaudio-knob>
+                </div>
+                <div class="knob flexible center middle">
+                  <webaudio-knob src="./images/neve.png" id="high_mid_gain" class="control" sensitivity="0.1" enable="1"  diameter="85"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+                </div>
               </div>
-              <div class="knob flexible center middle">
-                <webaudio-knob src="./images/red_knob.png" id="mixKnob" class="control" sensitivity="0.1" enable="1"  diameter="175"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+              <div class="btn row flexible middle between">
+                <div class="knob flexible center middle">
+                  <webaudio-knob src="./images/neve.png" id="high_mid_freq" class="control" sensitivity="0.1" enable="1"  diameter="85"  sprites="100" value="1600" min="350" max="7200" step="1"></webaudio-knob>
+                </div>
+                <div class="knob flexible center middle">
+                  <webaudio-knob src="./images/neve.png" id="low_mid_gain" class="control" sensitivity="0.1" enable="1"  diameter="85"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+                </div>
               </div>
-              <div class="knob flexible center middle">
-                <webaudio-knob src="./images/red_knob.png" id="mixKnob" class="control" sensitivity="0.1" enable="1"  diameter="175"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+              <div class="btn row flexible middle between">
+                <div class="knob flexible center middle">
+                  <webaudio-knob src="./images/neve.png" id="low_shelf_freq" class="control" sensitivity="0.1" enable="1"  diameter="85"  sprites="100" value="120" min="35" max="220" step="1"></webaudio-knob>
+                </div>
+                <div class="knob flexible center middle ">
+                  <webaudio-knob src="./images/neve.png" id="low_shelf_gain" class="control" sensitivity="0.1" enable="1"  diameter="85"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+                </div>
               </div>
-              <div class="knob flexible center middle">
-                <webaudio-knob src="./images/red_knob.png" id="mixKnob" class="control" sensitivity="0.1" enable="1"  diameter="175"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+            </div>
+
+            <div class="bottom_section flexible middle around column">
+              <div class="btn row flexible between center">
+                <div class="knob flexible center middle">
+                  <webaudio-knob src="./images/lowcut.png" id="low_cut" class="control" sensitivity="0.2" enable="1"  diameter="120"  sprites="100" value="0" min="0" max="300" step="75"></webaudio-knob>
+                </div>
+                <div class="knob flexible center middle">
+                  <webaudio-knob src="./images/db.png" id="db_gain" class="control" sensitivity="0.1" enable="1"  diameter="120"  sprites="100" value="0" min="0" max="110" step="1"></webaudio-knob>
+                </div>
+              </div>
+              <div class="btn row flexible middle center">
+                <webaudio-switch src="./images/button.png" id="db_gain" class="button" type="toggle" width="60" height="52"></webaudio-switch>
               </div>
             </div>
           </div>
