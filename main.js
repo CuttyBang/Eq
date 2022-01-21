@@ -26,7 +26,7 @@ const highMidGain = document.getElementById('high_mid_gain');
 const highMidFreq = document.getElementById('high_mid_freq');
 const highGain = document.getElementById('high_shelf_gain');
 
-const dbGainBoost = Boost(5);
+const dbGainBoost = Boost(9);
 const highPass = Highpass(0, 0);
 const lowShelf = Lowshelf(500, 0);
 const highShelf = Highshelf(6500, 0);
@@ -37,11 +37,11 @@ const amp = Convolver(preAmp[4]);
 const warmth = Waveshaper(30);
 
 const sourceGain = context.createGain();
-sourceGain.gain.value = 0.8;
+sourceGain.gain.value = 0.9;
 const dryGain = context.createGain();
 dryGain.gain.value = 0.8;
 const wetGain = context.createGain();
-wetGain.gain.value = 0.8;
+wetGain.gain.value = 0.9;
 const outputGain = context.createGain();
 outputGain.gain.value = 1;
 
