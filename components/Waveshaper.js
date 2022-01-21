@@ -32,16 +32,20 @@ export default function Waveshaper(amt) {
   const input = context.createGain();
   const driveGain = context.createGain();
   const output = context.createGain();
-  const drive = driveGain.gain;
+  const driveAmt = driveGain.gain;
 
   saturation.curve = curve(amt);
   input.gain.value = 0.8;
-  drive.value = 0.3;
+  driveAmt.value = 0.3;
   output.gain.value = 0.8;
 
   let to = (node) => {
     let out = output;
     out.connect(node.input || node);
+  }
+
+  function drive(lev) {
+    driveAmt.value = lev
   }
 
   input.connect(driveGain);

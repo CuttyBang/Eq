@@ -12,7 +12,7 @@ export default function Highpass(freq, quality) {
   if(freq){
     cutFreq.value = freq;
   } else {
-    cutFreq.value = 5000;
+    cutFreq.value = 100;
   };
 
   if(quality){

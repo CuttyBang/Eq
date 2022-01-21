@@ -19,7 +19,7 @@ export default function Peaking(freq, amt, quality) {
   if(quality){
     qVal.value = quality;
   } else {
-    qVal.value = 5000;
+    qVal.value = 0;
   };
 
   if(amt){
